@@ -19,17 +19,17 @@ get_header(); ?>
 
 					<div class="entry-meta">
 						<?php
-							$published_text = __( '<span class="attachment-meta">Published on <time class="entry-date" datetime="%1$s">%2$s</time> in <a href="%3$s" title="Return to %4$s" rel="gallery">%5$s</a></span>', get_translation_domain() );
-							$post_title = get_the_title( $post->post_parent );
-							if ( empty( $post_title ) || 0 == $post->post_parent )
-								$published_text = '<span class="attachment-meta"><time class="entry-date" datetime="%1$s">%2$s</time></span>';
+							$publishedText = __( '<span class="attachment-meta">Published on <time class="entry-date" datetime="%1$s">%2$s</time> in <a href="%3$s" title="Return to %4$s" rel="gallery">%5$s</a></span>', get_translation_domain() );
+							$postTitle = get_the_title( $post->post_parent );
+							if ( empty( $postTitle ) || 0 == $post->post_parent )
+								$publishedText = '<span class="attachment-meta"><time class="entry-date" datetime="%1$s">%2$s</time></span>';
 
-							printf( $published_text,
+							printf( $publishedText,
 								esc_attr( get_the_date( 'c' ) ),
 								esc_html( get_the_date() ),
 								esc_url( get_permalink( $post->post_parent ) ),
-								esc_attr( strip_tags( $post_title ) ),
-								$post_title
+								esc_attr( strip_tags( $postTitle ) ),
+								$postTitle
 							);
 
 							$metadata = wp_get_attachment_metadata();

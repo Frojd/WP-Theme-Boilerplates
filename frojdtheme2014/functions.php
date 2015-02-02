@@ -37,7 +37,7 @@
  * the entire theme.
  */
 function get_translation_domain() {
-	return FrojdTheme2014::getInstance()->translation_domain;
+	return FrojdTheme2014::getInstance()->translationDomain;
 }
 
 
@@ -47,7 +47,7 @@ function get_translation_domain() {
 class FrojdTheme2014 {
     public static $VERSION = "";
     protected static $instance = null;
-    public static $translation_domain = 'frojdtheme2014';
+    public $translationDomain = 'frojdtheme2014';
 
     private function __construct() {
         self::$VERSION = $this->getThemeVersion();
@@ -79,7 +79,7 @@ class FrojdTheme2014 {
          *
          * Translations can be added to the /languages/ directory.
          */
-        load_theme_textdomain(get_translation_domain(), get_template_directory() . '/languages');
+        load_theme_textdomain($this->translationDomain, get_template_directory() . '/languages');
     }
 
 
@@ -104,4 +104,4 @@ class FrojdTheme2014 {
     }
 }
 
-FrojdTheme2014::get_instance();
+FrojdTheme2014::getInstance();
