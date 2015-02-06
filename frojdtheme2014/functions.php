@@ -23,6 +23,8 @@
  * @since Fröjd Theme 2014 1.0
  */
 
+namespace Frojd\Theme\Frojd;
+
 /**
  * WP Helper functions
  *
@@ -73,7 +75,7 @@ class FrojdTheme2014 {
      * Sets up theme defaults and registers the various WordPress features.
      *
      */
-    function afterSetupThemeHook() {
+    public function afterSetupThemeHook() {
         /*
          * Makes Fröjd Theme 2014 available for translation.
          *

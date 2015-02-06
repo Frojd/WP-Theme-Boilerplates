@@ -11,6 +11,8 @@
  * @since Fröjd Theme 2014 1.0
  */
 
+namespace Frojd\Theme\Frojd;
+
 get_header(); ?>
 
 	<div id="primary" class="content-area">

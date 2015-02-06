@@ -9,6 +9,8 @@
  * @since Fröjd Theme 2014 1.0
  */
 
+namespace Frojd\Theme\Frojd;
+
 get_template_part('parts/header', 'head'); ?>
 
 <body <?php body_class(); ?>>
