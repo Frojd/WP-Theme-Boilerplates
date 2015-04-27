@@ -1,0 +1,49 @@
+/*
+Theme Name: Fröjd Theme 2015
+Description: Adds support for languages written in a Right To Left (RTL) direction.
+It's easy, just a matter of overwriting all the horizontal positioning attributes
+of your CSS stylesheet in a separate stylesheet file named rtl.css.
+
+See http://codex.wordpress.org/Right_to_Left_Language_Support
+*/
+
+/**
+ * Reset
+ * ----------------------------------------------------------------------------
+ */
+
+body {
+    direction: rtl;
+    unicode-bidi: embed;
+}
+
+a {
+    display: inline-block;
+}
+
+blockquote blockquote {
+    margin-left: 0;
+    margin-right: 24px;
+}
+
+menu,
+ol,
+ul {
+    padding: 0 40px 0 0;
+}
+
+caption,
+th,
+td {
+    text-align: right;
+}
+
+td {
+    padding-left: 10px;
+    padding-right: 0;
+}
+
+.assistive-text:focus {
+    left: auto;
+    right: 5px;
+}
