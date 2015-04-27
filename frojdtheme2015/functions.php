@@ -92,7 +92,8 @@ class FrojdTheme2015 {
      * Hook for wp_footer function, called in footer.php
      */
     public function wpFooterHook() {
-        $this->printBrowserUpdate();
+        // Renderes the browser-update javascript code to footer
+        get_template_part('parts/browser-update');
     }
 
     /*------------------------------------------------------------------------*
@@ -106,24 +107,6 @@ class FrojdTheme2015 {
     /*------------------------------------------------------------------------*
      * Private
      *------------------------------------------------------------------------*/
-
-    /**
-     * Prints the browser update javascript code
-     */
-    private function printBrowserUpdate() {
-        ?>
-            <script>
-                var $buoop = {c:2};
-                function $buo_f(){
-                    var e = document.createElement("script");
-                    e.src = "//browser-update.org/update.js";
-                    document.body.appendChild(e);
-                };
-                try {document.addEventListener("DOMContentLoaded", $buo_f,false)}
-                catch(e){window.attachEvent("onload", $buo_f)}
-            </script>
-        <?php
-    }
 
     /**
      * Renders a template
