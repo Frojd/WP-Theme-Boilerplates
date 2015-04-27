@@ -59,6 +59,8 @@ class FrojdTheme2015 {
         add_action('wp_footer', array($this, 'wpFooterHook'));
 
         // Filters
+
+        // Shortcodes
     }
 
     public static function getInstance() {
