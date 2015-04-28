@@ -1,5 +1,8 @@
 # WP-Theme-Boilerplates
 
+Copy the following guidelines to your project readme file, can be useful when working in projects using this theme. Also remember to rename the theme to something more project specific.
+
+
 ## Fröjd Themes
 These themes are biolerplates customized after the Wordpress Twenty themes, and with structural changes created with consideration to Fröjds processes and guidlines. Some of the guidelines below might only be available in a certain theme, probably the latest one.
 
