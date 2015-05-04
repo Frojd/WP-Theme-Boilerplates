@@ -9,7 +9,7 @@
  * @since Fröjd Theme 1.0
  */
 
-namespace Frojd\Theme\Frojd;
+use Frojd\Themes\FrojdTheme2015\FrojdTheme2015 as FrojdTheme2015;
 
 /**
  * Translation domain.

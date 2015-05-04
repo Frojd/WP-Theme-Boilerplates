@@ -23,14 +23,16 @@
  * @since Fröjd Theme 2015 1.0
  */
 
-namespace Frojd\Theme\Frojd;
+/** Namespace should have format ProjectName\Location\ThemeName **/
+namespace Frojd\Themes\FrojdTheme2015;
 
 
 /**
  * Custom template tags for this theme.
  *
  * These are helper functions which can be called in the theme, 
- * in return they may call functions in the specific theme class below
+ * in return they may call functions in the specific theme class below.
+ * This doesn't have a class, so it doesn't need a namespace
  *
  * @since Fröjd Theme 2015 1.0
  */
