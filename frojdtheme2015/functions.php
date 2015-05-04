@@ -34,7 +34,7 @@ namespace Frojd\Theme\Frojd;
  *
  * @since Fröjd Theme 2015 1.0
  */
-require __DIR__ . '/inc/template-tags.php';
+require __DIR__ . '/inc/templatetags.php';
 
 
 /**
