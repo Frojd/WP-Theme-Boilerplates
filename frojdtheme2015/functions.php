@@ -40,6 +40,22 @@ require __DIR__ . '/inc/templatetags.php';
 
 
 /**
+ * Custom classes for the theme
+ * 
+ * Use these instead of plugins to separate functionality, 
+ * so they still are theme specific, for example custom post types
+ */
+
+/**
+ * Post Helper Class for managing posts and metaboxes
+ *
+ * @since Sharing Sweden 1.0
+ */
+require __DIR__ . '/inc/post.php';
+use Frojd\Themes\FrojdTheme2015\Inc\Post\Post as Post;
+
+
+/**
  * Theme specific class
 */
 class FrojdTheme2015 {
@@ -49,8 +65,13 @@ class FrojdTheme2015 {
     // Sets the translation domain used for the theme
     public $translationDomain = 'frojdtheme2015';
 
+    public $postInstance;
+
     private function __construct() {
         self::$VERSION = $this->getThemeVersion();
+
+        // Classes
+        $this->postInstance = Post::getInstance();
 
         /*
          * Always seperate hooks and filters, and always name the function as actionNameHook or filterNameFilter.
@@ -58,7 +79,11 @@ class FrojdTheme2015 {
 
         // Hooks
         add_action('after_setup_theme', array($this, 'afterSetupThemeHook'));
-        add_action('wp_footer', array($this, 'wpFooterHook'));
+        add_action('wp_footer',         array($this, 'wpFooterHook'));
+
+        /*
+         * You can call hooks in other classes from here, e.g. add_action('init', array($this->postInstanse, 'initHook'));
+         */
 
         // Filters
 
@@ -99,6 +124,7 @@ class FrojdTheme2015 {
         // Renderes the browser-update javascript code to footer
         get_template_part('parts/browser-update');
     }
+
 
     /*------------------------------------------------------------------------*
      * Filters
