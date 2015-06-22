@@ -1,12 +1,12 @@
 <?php
 /**
- * Custom template tags for Sharing Sweden
+ * Custom template tags for Fröjd Theme 2015
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
  * @package WordPress
- * @subpackage Sharing_Sweden
- * @since Sharing Sweden 1.0
+ * @subpackage Frojd_Theme_2015
+ * @since Fröjd Theme 2015 1.0
  */
 
 namespace Frojd\Themes\FrojdTheme2015\Inc\Post;
