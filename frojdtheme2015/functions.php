@@ -1,26 +1,10 @@
 <?php
 /**
- * Fröjd Theme 2015 functions and definitions
+ * Theme functions and definitions
  *
  * Sets up the theme and provides some helper functions, which are used in the
  * theme as custom template tags. Others are attached to action and filter
  * hooks in WordPress to change core functionality.
- *
- * When using a child theme (see http://codex.wordpress.org/Theme_Development
- * and http://codex.wordpress.org/Child_Themes), you can override certain
- * functions (those wrapped in a function_exists() call) by defining them first
- * in your child theme's functions.php file. The child theme's functions.php
- * file is included before the parent theme's file, so the child theme
- * functions would be used.
- *
- * Functions that are not pluggable (not wrapped in function_exists()) are
- * instead attached to a filter or action hook.
- *
- * For more information on hooks, actions, and filters, @link http://codex.wordpress.org/Plugin_API
- *
- * @package WordPress
- * @subpackage Frojd_Theme_2015
- * @since Fröjd Theme 2015 1.0
  */
 
 /** Namespace should have format ProjectName\Location\ThemeName **/
@@ -33,8 +17,6 @@ namespace Frojd\Themes\FrojdTheme2015;
  * These are helper functions which can be called in the theme, 
  * in return they may call functions in the specific theme class below.
  * This doesn't have a class, so it doesn't need a namespace
- *
- * @since Fröjd Theme 2015 1.0
  */
 require __DIR__ . '/inc/templatetags.php';
 
@@ -46,13 +28,17 @@ require __DIR__ . '/inc/templatetags.php';
  * so they still are theme specific, for example custom post types
  */
 
-/**
- * Post Helper Class for managing posts and metaboxes
- *
- * @since Sharing Sweden 1.0
- */
-require __DIR__ . '/inc/post.php';
-use Frojd\Themes\FrojdTheme2015\Inc\Post\Post as Post;
+/** For creating post types */
+require __DIR__ . '/inc/posttypes.php';
+use Frojd\Themes\FrojdTheme2015\Inc\PostTypes\PostTypes as PostTypes;
+
+/** For creating metaboxes */
+require __DIR__ . '/inc/metaboxes.php';
+use Frojd\Themes\FrojdTheme2015\Inc\Metaboxes\Metaboxes as Metaboxes;
+
+/** For creating taxonomies */
+require __DIR__ . '/inc/taxonomies.php';
+use Frojd\Themes\FrojdTheme2015\Inc\Taxonomies\Taxonomies as Taxonomies;
 
 
 /**
@@ -103,14 +89,14 @@ class FrojdTheme2015 {
      *------------------------------------------------------------------------*/
 
     /**
-     * Fröjd Theme 2015 setup.
+     * Theme setup.
      *
      * Sets up theme defaults and registers the various WordPress features.
      *
      */
     public function afterSetupThemeHook() {
         /*
-         * Makes Fröjd Theme 2015 available for translation.
+         * Makes theme available for translation.
          *
          * Translations can be added to the /languages/ directory.
          */

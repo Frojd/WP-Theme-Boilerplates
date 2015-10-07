@@ -1,15 +1,3 @@
-<?php
-/**
- * The template for displaying a "No posts found" message
- *
- * @package WordPress
- * @subpackage Frojd_Theme_2015
- * @since Fröjd Theme 2015 1.0
- */
-
-namespace Frojd\Theme\Frojd;
-?>
-
 <header class="page-header">
     <h1 class="page-title"><?php _e( 'Nothing Found', get_translation_domain() ); ?></h1>
 </header>

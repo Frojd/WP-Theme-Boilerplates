@@ -1,15 +1,4 @@
-<?php
-/**
- * The template for displaying 404 pages (Not Found)
- *
- * @package WordPress
- * @subpackage Frojd_Theme_2015
- * @since Fröjd Theme 2015 1.0
- */
-
-namespace Frojd\Theme\Frojd;
-
-get_header(); ?>
+<?php get_header(); ?>
 
     <div id="primary" class="content-area">
         <div id="content" class="site-content" role="main">

@@ -1,17 +1,3 @@
-<?php
-/**
- * The template for displaying the footer
- *
- * Contains footer content and the closing of the #main and #page div elements.
- *
- * @package WordPress
- * @subpackage Frojd_Theme_2015
- * @since Fröjd Theme 2015 1.0
- */
-
-namespace Frojd\Theme\Frojd;
-?>
-
             </div><!-- #main -->
             <footer id="colophon" class="site-footer" role="contentinfo">
                 <div class="site-info">

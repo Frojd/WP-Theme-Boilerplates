@@ -1,17 +1,4 @@
-<?php
-/**
- * The sidebar containing the secondary widget area
- *
- * Displays on posts and pages.
- *
- * If no active widgets are in this sidebar, hide it completely.
- *
- * @package WordPress
- * @subpackage Frojd_Theme_2015
- * @since Fröjd Theme 2015 1.0
- */
-
-if ( is_active_sidebar( 'sidebar-2' ) ) : ?>
+<?php if ( is_active_sidebar( 'sidebar-2' ) ) : ?>
     <div id="tertiary" class="sidebar-container" role="complementary">
         <div class="sidebar-inner">
             <div class="widget-area">

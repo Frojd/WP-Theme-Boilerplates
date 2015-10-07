@@ -1,12 +1,8 @@
 <?php
 /**
- * Custom template tags for Fröjd Theme 2015
+ * Custom template tags
  *
  * Eventually, some of the functionality here could be replaced by core features.
- *
- * @package WordPress
- * @subpackage Fröjd_Theme
- * @since Fröjd Theme 1.0
  */
 
 use Frojd\Themes\FrojdTheme2015\FrojdTheme2015 as FrojdTheme2015;

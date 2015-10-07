@@ -1,17 +1,4 @@
-<?php
-/**
- * The Header template for our theme
- *
- * Displays all of the <head> section and everything up till <div id="main">
- *
- * @package WordPress
- * @subpackage Frojd_Theme_2015
- * @since Fröjd Theme 2015 1.0
- */
-
-namespace Frojd\Theme\Frojd;
-
-get_template_part('parts/header', 'head'); ?>
+<?php get_template_part('parts/header', 'head'); ?>
 
 <body <?php body_class(); ?>>
     <div id="page" class="hfeed site">
