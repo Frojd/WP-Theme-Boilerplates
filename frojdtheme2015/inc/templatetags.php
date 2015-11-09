@@ -14,5 +14,5 @@ use Frojd\Themes\FrojdTheme2015\FrojdTheme2015 as FrojdTheme2015;
  * the entire theme.
  */
 function get_translation_domain() {
-    return FrojdTheme2015::getInstance()->translationDomain;
+    return FrojdTheme2015::getInstance()->themeInstance->translationDomain;
 }
