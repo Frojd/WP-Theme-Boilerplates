@@ -133,7 +133,13 @@ class Metaboxes {
     ?>
         <tr>
             <?php if(isset($field['label'])) : ?>
-                <td style="vertical-align: top;"><label for="<?php echo $field['id']; ?>"><?php echo $field['label']; ?></label></td>
+                <td style="vertical-align: top; width: 200px;">
+                    <?php if($field['type'] == 'checkbox') : ?>
+                        <?php echo $field['label']; ?>
+                    <?php else : ?>
+                        <label for="<?php echo $field['id']; ?>"><?php echo $field['label']; ?></label>
+                    <?php endif; ?>
+                </td>
             <?php endif; ?>
 
             <td colspan="<?php echo isset($field['label']) ? 1 : 2; ?>">
@@ -155,6 +161,9 @@ class Metaboxes {
 
                     case 'checkbox': ?>
                         <input type="<?php echo $field['type']; ?>" id="<?php echo $field['id']; ?>" name="<?php echo $field['id']; ?>" <?php echo $field['value'] && $field['value'] == 'on' ? ' checked="checked"' : ''; ?><?php echo $class; ?>>
+                        <?php if(isset($field['checkbox_label'])) : ?>
+                             <label for="<?php echo $field['id']; ?>"><?php echo $field['checkbox_label']; ?></label>
+                        <?php endif; ?>
                         <?php break;
 
                     case 'radio': ?>
