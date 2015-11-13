@@ -84,7 +84,11 @@ class Theme {
      *------------------------------------------------------------------------*/
 
     private function addThemeSupport() {
+        // Add support for feature image
         add_theme_support('post-thumbnails');
+
+        // Let WordPress manage the document title.
+        add_theme_support('title-tag');
     }
 
     private function loadTextDomain() {

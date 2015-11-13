@@ -1,19 +1,23 @@
 <?php get_header(); ?>
 
-    <div id="primary" class="content-area">
-        <div id="content" class="site-content" role="main">
-        <?php if ( have_posts() ) : ?>
+    <div class="content">
+        <div class="content__main" role="main">
 
-            <?php /* The loop */ ?>
-            <?php while ( have_posts() ) : the_post(); ?>
-                <?php get_template_part( 'content', get_post_format() ); ?>
-            <?php endwhile; ?>
+            <div class="content__entry">
+                <?php if ( have_posts() ) : ?>
 
-        <?php else : ?>
-            <?php get_template_part( 'content', 'none' ); ?>
-        <?php endif; ?>
+                    <?php /* The loop */ ?>
+                    <?php while ( have_posts() ) : the_post(); ?>
+                        <?php get_template_part( 'entry', get_post_type() ); ?>
+                    <?php endwhile; ?>
 
-        </div><!-- #content -->
-    </div><!-- #primary -->
+                <?php else : ?>
+                    <?php get_template_part( 'entry', 'none' ); ?>
+                <?php endif; ?>
+
+            </div><!-- .content__entry -->
+
+        </div><!-- .content__main -->
+    </div><!-- .content -->
 
 <?php get_footer(); ?>

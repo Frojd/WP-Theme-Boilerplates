@@ -1,22 +1,17 @@
 <?php get_header(); ?>
 
-    <div id="primary" class="content-area">
-        <div id="content" class="site-content" role="main">
+    <div class="content">
+        <div class="content__main" role="main">
 
-            <header class="page-header">
-                <h1 class="page-title"><?php _e( 'Not found', get_translation_domain() ); ?></h1>
-            </header>
+            <header class="content__header">
+                <h1 class="content__title"><?php _e( 'Not found', get_translation_domain() ); ?></h1>
+            </header><!-- .content__header -->
 
-            <div class="page-wrapper">
-                <div class="page-content">
-                    <h2><?php _e( 'This is somewhat embarrassing, isn&rsquo;t it?', get_translation_domain() ); ?></h2>
-                    <p><?php _e( 'It looks like nothing was found at this location. Maybe try a search?', get_translation_domain() ); ?></p>
+            <div class="content__entry">
+                <?php get_template_part('entry', '404'); ?>
+            </div><!-- .content__entry -->
 
-                    <?php get_search_form(); ?>
-                </div><!-- .page-content -->
-            </div><!-- .page-wrapper -->
-
-        </div><!-- #content -->
-    </div><!-- #primary -->
+        </div><!-- .content__main -->
+    </div><!-- .content -->
 
 <?php get_footer(); ?>

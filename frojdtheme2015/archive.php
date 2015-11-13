@@ -1,11 +1,11 @@
 <?php get_header(); ?>
 
-    <div id="primary" class="content-area">
-        <div id="content" class="site-content" role="main">
+    <div class="content">
+        <div class="content__main" role="main">
 
             <?php if ( have_posts() ) : ?>
-                <header class="archive-header">
-                    <h1 class="archive-title"><?php
+                <header class="content__header">
+                    <h1 class="content__title"><?php
                         if ( is_day() ) :
                             printf( __( 'Daily Archives: %s', get_translation_domain() ), get_the_date() );
                         elseif ( is_month() ) :
@@ -16,18 +16,22 @@
                             _e( 'Archives', get_translation_domain() );
                         endif;
                     ?></h1>
-                </header><!-- .archive-header -->
+                </header><!-- .content__header -->
 
-                <?php /* The loop */ ?>
-                <?php while ( have_posts() ) : the_post(); ?>
-                    <?php get_template_part( 'content', get_post_format() ); ?>
-                <?php endwhile; ?>
+                <div class="content__entry">
+                    <?php /* The loop */ ?>
+                    <?php while ( have_posts() ) : the_post(); ?>
+                        <?php get_template_part( 'entry', get_post_type() ); ?>
+                    <?php endwhile; ?>
+                </div><!-- .content__entry -->
 
             <?php else : ?>
-                <?php get_template_part( 'content', 'none' ); ?>
+                <div class="content__entry">
+                    <?php get_template_part( 'entry', 'none' ); ?>
+                </div><!-- .content__entry -->
             <?php endif; ?>
 
-        </div><!-- #content -->
-    </div><!-- #primary -->
+        </div><!-- .content__main -->
+    </div><!-- .content -->
 
 <?php get_footer(); ?>
